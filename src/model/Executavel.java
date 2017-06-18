@@ -212,7 +212,7 @@ public class Executavel {
 //			System.out.println("Vendedor : " + ob[0] + ", Ano: " + ob[1] + ", Total pedidos: " + ob[2]);
 //		}
 
-		
+// testando upd			
 		
 		em.getTransaction().commit();
 
