@@ -201,16 +201,16 @@ public class Executavel {
 		
 //		Ex 16 -  Exiba a relação com os melhores vendedores (considerando apenas a quantidade de pedidos) 
 //		para o mês de setembro (incluindo todos os anos). Exiba o nome do vendedor, o ano e o número total de pedidos daquele ano
-		Query q = em.createQuery("SELECT v.nome, FUNCTION('YEAR', p.dataPedido), COUNT(p.codPedido) "
-				+ "FROM Vendedor v "
-				+ "JOIN Pedido p on p.vendedor = v.codVendedor "
-				+ "WHERE FUNCTION('MONTH', p.dataPedido) = 9 "
-				+ "GROUP BY v.codVendedor, FUNCTION('YEAR', p.dataPedido) "
-				+ "ORDER BY COUNT(p.codPedido) desc");
-		List<Object[]> res = q.getResultList();
-		for(Object[] ob : res){
-			System.out.println("Vendedor : " + ob[0] + ", Ano: " + ob[1] + ", Total pedidos: " + ob[2]);
-		}
+//		Query q = em.createQuery("SELECT v.nome, FUNCTION('YEAR', p.dataPedido), COUNT(p.codPedido) "
+//				+ "FROM Vendedor v "
+//				+ "JOIN Pedido p on p.vendedor = v.codVendedor "
+//				+ "WHERE FUNCTION('MONTH', p.dataPedido) = 9 "
+//				+ "GROUP BY v.codVendedor, FUNCTION('YEAR', p.dataPedido) "
+//				+ "ORDER BY COUNT(p.codPedido) desc");
+//		List<Object[]> res = q.getResultList();
+//		for(Object[] ob : res){
+//			System.out.println("Vendedor : " + ob[0] + ", Ano: " + ob[1] + ", Total pedidos: " + ob[2]);
+//		}
 		
 		
 		em.getTransaction().commit();
