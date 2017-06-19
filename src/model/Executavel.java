@@ -211,6 +211,7 @@ public class Executavel {
 //		for(Object[] ob : res){
 //			System.out.println("Vendedor : " + ob[0] + ", Ano: " + ob[1] + ", Total pedidos: " + ob[2]);
 //		}
+<<<<<<< HEAD
 
 
 //		Ex 17 - Liste o nome dos clientes e o total de pedidos de cada cliente, em ordem crescente
@@ -269,6 +270,9 @@ public class Executavel {
 //			// todos os dados, conforme pede o exercício
 //		}
 		
+=======
+	
+>>>>>>> 5a02f57df2cec7f53679f0aa577d48cbdf2a34f9
 		
 		em.getTransaction().commit();
 
