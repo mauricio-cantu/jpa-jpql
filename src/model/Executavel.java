@@ -212,7 +212,63 @@ public class Executavel {
 //			System.out.println("Vendedor : " + ob[0] + ", Ano: " + ob[1] + ", Total pedidos: " + ob[2]);
 //		}
 
-// testando upd			
+
+//		Ex 17 - Liste o nome dos clientes e o total de pedidos de cada cliente, em ordem crescente
+//		de pedidos. Os clientes sem pedidos também devem ser listados.
+//		Query q = em.createQuery("SELECT c.nome, COUNT(p.codPedido) as Pedidos "
+//				+ "FROM Cliente c "
+//				+ "LEFT JOIN Pedido p on p.cliente = c.codCliente "
+//				+ "GROUP BY c.codCliente "
+//				+ "ORDER BY Pedidos asc");
+//		List<Object[]> res = q.getResultList();
+//		for(Object[] ob : res){
+//			System.out.println("Nome: " + ob[0] + ", pedidos: " + ob[1]);
+//		}
+		
+		
+//		Ex 18 - Exiba uma relação em ordem alfabética do código do cliente e nome dos clientes
+//		que nunca fizeram nenhum pedido
+//		Query q = em.createQuery("SELECT c.codCliente, c.nome "
+//				+ "FROM Cliente c "
+//				+ "LEFT JOIN Pedido p on p.cliente = c.codCliente "
+//				+ "WHERE p.cliente is null");
+//		List<Object[]> res = q.getResultList();
+//		for(Object[] ob : res){
+//			System.out.println("Código: " + ob[0] + ", Nome: " + ob[1]);
+//		}
+		
+		
+//		Ex 19 - Mostre o código do produto, a descrição e o valor total obtido por cada produto ao
+//		longo da história da loja. Ordene a lista pelo valor total dos produtos. Observe que
+//		mesmo os produtos que nunca foram vendidos devem ser exibidos.
+//		Query q = em.createQuery("SELECT pr.codProduto, pr.descricao, sum(i.quantidade * pr.valorUnitario) as ValorTotal "
+//				+ "FROM Produto pr "
+//				+ "LEFT JOIN Itempedido i on i.produto = pr.codProduto "
+//				+ "GROUP BY pr.codProduto "
+//				+ "ORDER BY ValorTotal asc ");
+//		List<Object[]> res = q.getResultList();
+//		for(Object[] ob : res){
+//			System.out.println("Código: " + ob[0] + ", Descrição: " + ob[1] + ", Valor Total: " + ob[2]);
+//		}
+		
+		
+//		Ex 20 -  Mostre todos os dados dos vendedores e a quantidade total de pedidos efetuados
+//		por cada vendedor. A relação deve contar apenas os vendedores de faixa de
+//		comissão “A” e ordenados pela quantidade total de pedidos. Mesmo os vendedores
+//		sem pedidos devem ser listados.
+//		Query q = em.createQuery("SELECT v, COUNT(p.codPedido) as Pedidos "
+//				+ "FROM Vendedor v "
+//				+ "LEFT JOIN Pedido p on p.vendedor = v.codVendedor "
+//				+ "WHERE v.faixaComissao = 'A' "
+//				+ "GROUP BY v.codVendedor "
+//				+ "ORDER BY Pedidos desc");
+//		List<Object[]> res = q.getResultList();
+//		for(Object[] ob : res){//
+//			System.out.println(ob[0] + ", Pedidos: " + ob[1]);
+//			// ob[0] retorna o objeto Vendedor inteiro, porém sobrescrevi o método toString da classe Vendedor para retonar
+//			// todos os dados, conforme pede o exercício
+//		}
+		
 		
 		em.getTransaction().commit();
 
