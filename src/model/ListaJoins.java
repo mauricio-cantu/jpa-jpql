@@ -8,7 +8,7 @@ import javax.persistence.NamedQuery;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
 
-public class Executavel {
+public class ListaJoins {
 
 	public static void main(String[] args) {
 		EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("compubras");
@@ -21,8 +21,8 @@ public class Executavel {
 //		Query select = em.createNamedQuery("Itempedido.findAll");
 //		List<Itempedido> resultado = select.getResultList();
 //		for(Itempedido i : resultado){
-//			System.out.println("Quantidade: " + i.getQuantidade() 
-//			+ ", Descrição: " + i.getProduto().getDescricao() 
+//			System.out.println("Quantidade: " + i.getQuantidade()
+//			+ ", Descrição: " + i.getProduto().getDescricao()
 //					+ ", Cod Produto: " + i.getProduto().getCodProduto());
 //		}
 	
@@ -34,7 +34,7 @@ public class Executavel {
 //		for(Object[] ob : resultados){
 //			System.out.println("Quantidade: " + ob[0] + ", Pedido: " + ob[1]);
 //		}
-		
+
 
 //		Ex 3 - Ver os pedidos de cada cliente, listando nome do cliente e número do pedido.
 //		Query select = em.createQuery("SELECT c.nome, p.codPedido FROM Pedido p"
