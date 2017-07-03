@@ -170,9 +170,21 @@ public class ListaSubConsultas {
 //		10) Crie uma consulta que exiba o nome do cliente, o nome do vendedor de seu último pedido e o
 //		estado do cliente. Devem ser exibidos apenas os clientes do Rio Grande do Sul e apenas o
 //		último vendedor. 
-//		Query q = em.createQuery("SELECT c.nome, (SELECT ), c.uf "
-//				+ "FROM Cliente c ");
-//		CONTINUAR
+//		Query q = em.createNativeQuery("SELECT c.nome, "
+//					+ "(SELECT v.nome "
+//					+ "FROM vendedor v, pedido p "
+//					+ "WHERE p.codvendedor = v.codvendedor "
+//					+ "AND p.codcliente = c.codcliente "
+//					+ "ORDER BY p.datapedido DESC "
+//					+ "LIMIT 1), "
+//				+ "c.uf "
+//				+ "FROM cliente c "
+//				+ "WHERE c.uf = 'RS'");
+//		List<Object[]> res = q.getResultList();
+//		for(Object[] o : res){
+//			System.out.println("Cliente: " + o[0] + ", Último vendedor: " + o[1] + ", Estado: " + o[2]);
+//		}
+
 		
 		
 //		11) Selecione o nome do produto e o valor unitário dos produtos que possuem o valor unitário
