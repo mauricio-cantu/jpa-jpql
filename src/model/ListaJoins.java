@@ -264,11 +264,12 @@ public class ListaJoins {
 //				+ "ORDER BY Pedidos desc");
 //		List<Object[]> res = q.getResultList();
 //		for(Object[] ob : res){//
-//			System.out.println(ob[0] + ", Pedidos: " + ob[1]);
-//			// ob[0] retorna o objeto Vendedor inteiro, porém sobrescrevi o método toString da classe Vendedor para retonar
-//			// todos os dados, conforme pede o exercício
+//			System.out.println("Cod: " + ((Vendedor) ob[0]).getCodVendedor() + ", Nome: " + ((Vendedor) ob[0]).getNome() + 
+//					", Faixa: " + ((Vendedor) ob[0]).getFaixaComissao() + 
+//					", Salario: " + ((Vendedor) ob[0]).getSalarioFixo() +
+//					", Total de Pedidos: " + ob[1]);
 //		}
-		
+//		System.out.println(q.getResultList().size());
 		
 		em.getTransaction().commit();
 

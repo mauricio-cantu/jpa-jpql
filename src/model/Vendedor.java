@@ -90,9 +90,5 @@ public class Vendedor implements Serializable {
 		return pedido;
 	}
 	
-	@Override
-	public String toString(){
-		return "Código: " + this.codVendedor + ", Nome: " + this.nome + ", Faixa: " + this.faixaComissao + ", Salario: " + this.salarioFixo;
-	}
 
 }
